@@ -15,7 +15,7 @@ public class Client {
         double writeProb = 0.2;
         if (args.length>=1) try { writeProb = Double.parseDouble(args[0]); } catch (Exception ignored) {}
         try (PrintWriter log = new PrintWriter(new FileWriter("client.log", true))) {
-            Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+            Registry registry = LocateRegistry.getRegistry("172.21.80.1", 1099);
             GraphService stub = (GraphService) registry.lookup("GraphService");
             Random rand = ThreadLocalRandom.current();
             while (true) {

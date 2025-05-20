@@ -8,7 +8,7 @@ import java.rmi.registry.Registry;
 
 public class Server {
     public static void main(String[] args) {
-        String filename = "graph.txt";
+        String filename = "server/graph.txt";
         Graph g = new Graph();
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
