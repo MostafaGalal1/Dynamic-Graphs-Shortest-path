@@ -1,0 +1,39 @@
+11:19:51 BATCH size=3 elapsed=57ms
+  QUERY 6->6 -> -1
+  QUERY 3->10 -> -1
+  QUERY 2->1 -> 2
+11:19:56 BATCH size=3 elapsed=7ms
+  QUERY 10->5 -> -1
+  DELETE 2->2 -> false
+  ADD 3->4 -> true
+11:20:05 BATCH size=5 elapsed=7ms
+  QUERY 2->8 -> -1
+  QUERY 4->8 -> -1
+  QUERY 5->10 -> -1
+  QUERY 3->7 -> -1
+  QUERY 7->4 -> -1
+11:20:06 BATCH size=4 elapsed=7ms
+  ADD 8->10 -> true
+  QUERY 1->9 -> -1
+  DELETE 6->5 -> false
+  QUERY 1->1 -> 0
+11:20:08 BATCH size=3 elapsed=5ms
+  QUERY 1->2 -> 1
+  QUERY 1->8 -> -1
+  QUERY 2->6 -> -1
+11:20:14 BATCH size=3 elapsed=5ms
+  QUERY 8->6 -> -1
+  DELETE 1->6 -> false
+  QUERY 8->6 -> -1
+11:20:20 BATCH size=3 elapsed=7ms
+  QUERY 1->9 -> -1
+  QUERY 6->3 -> -1
+  QUERY 8->7 -> -1
+11:20:29 BATCH size=1 elapsed=4ms
+  QUERY 3->2 -> 2
+11:20:33 BATCH size=1 elapsed=4ms
+  QUERY 8->1 -> -1
+11:20:37 BATCH size=3 elapsed=2ms
+  QUERY 1->7 -> -1
+  QUERY 4->5 -> -1
+  QUERY 9->3 -> -1

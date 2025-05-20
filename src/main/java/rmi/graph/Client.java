@@ -13,8 +13,14 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Client {
     public static void main(String[] args) {
         double writeProb = 0.2;
-        if (args.length>=1) try { writeProb = Double.parseDouble(args[0]); } catch (Exception ignored) {}
-        try (PrintWriter log = new PrintWriter(new FileWriter("client.log", true))) {
+        int clientId = 0;
+        if (args.length>=2) try {
+            writeProb = Double.parseDouble(args[0]);
+            clientId = Integer.parseInt(args[1]);
+        }
+        catch (Exception ignored) {}
+        String logFileName = "client" + clientId + ".log";
+        try (PrintWriter log = new PrintWriter(new FileWriter(logFileName, true))) {
             Registry registry = LocateRegistry.getRegistry("localhost", 1099);
             GraphService stub = (GraphService) registry.lookup("GraphService");
             Random rand = ThreadLocalRandom.current();
